@@ -24,5 +24,13 @@ removeItem(item: string) {
   })
 }
 
+// write a function to edit items to the list
+editItem(item: string) {
+  this.items = this.items.filter((i: any) => {
+    return i !== item;
+  })  
+  this.newItem = item;
+}
+
   title = 'chips-input';
 }
