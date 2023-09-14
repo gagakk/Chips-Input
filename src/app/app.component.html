@@ -20,11 +20,21 @@
               </svg>
               Edit
             </button>
+            <button class="btn btn-success btn-sm ms-3" (click)="completeItem(item)">Complete</button>
             <button class="btn btn-danger btn-sm ms-3" (click)="removeItem(item)">X</button>
           </div>
         </li>
       </ul>
     </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <h2>Completed List</h2>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of completedItems">
+          {{item}}
+        </li>
+      </ul>
   </div>
 </div>
 

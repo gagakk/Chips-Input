@@ -10,6 +10,8 @@ export class AppComponent {
   newItem ='';
   // initiate an empty array to hold the items
   items:string[] = [];
+  // initiate an empty array to hold the completed items
+  completedItems:string[] = [];
 
 // write a function to add items to the list
 addItem() {
@@ -32,5 +34,13 @@ editItem(item: string) {
   this.newItem = item;
 }
 
-  title = 'chips-input';
+// write a function to make items as done
+completeItem(item: string) {
+  this.items = this.items.filter((i: any) => {
+    return i !== item;
+  })
+  this.completedItems.push(item);
+}
+
+  title = 'To-do List';
 }
